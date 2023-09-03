@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&family=Patrick+Hand&display=swap');
+
+:root{
+    --color-light: #D6CDD0;
+    --color-dark: #070C08;
+    --color-dark-transparent: #070C08a0;
+    --color-accent: #B7460A;
+    --color-link: #498D1E;
+    --color-visited: #105B0C;
+    --color-success: #266A22;
+    --color-error: #6B2222;
+    --color-warning: #ABA91D;
+
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    font-family: Dosis,sans-serif;
+    font-size: large;
+}
+
+p {
+    line-height: 1.5;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.banner {
+    background-image: url("../img/jewel-beetle-5581683.jpg");
+    background-position: -10rem;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(30rem + 5vw);
+    overflow: hidden;
+    color: var(--color-light);
+}
+
+.banner .logo {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    height: fit-content;
+    background-color: var(--color-dark-transparent);
+    font-family: "Patrick Hand";
+    font-size: 3rem;
+}
+
+.banner .logo svg{
+    fill: var(--color-light);
+}
+
+.banner .credit {
+    position: fixed;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    color: var(--color-light);
+}
+
+.text-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.accent {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.form-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+form {
+    background-color: var(--color-dark-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+fieldset {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.form-field{
+    width: 20rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: .2rem;
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    background-color: var(--color-dark-transparent);
+    border: 1px solid var(--color-light);
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: medium;
+    padding: .2rem;
+    color: var(--color-light);
+}
+
+input:focus {
+    outline: 1px solid var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+input:focus + label{
+    color: var(--color-accent);
+}
+
+.submit-box{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+button {
+    color: var(--color-light);
+    padding: .5rem;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--color-link);
+    border: none;
+    width: max-content;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--color-visited);
+    cursor: pointer;
+}
+
+a {
+    color: var(--color-link);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--color-visited);
+}

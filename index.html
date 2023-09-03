@@ -41,22 +41,28 @@
             </fieldset>
             <fieldset>
                 <div class="form-field">
+                    
                     <input name="email" id="email" type="email">
                     <label for="email">E-MAIL</label>
+                    <p class="error-msg">E-mail adress is not correctly formatted</p>
                 </div>
                 <div class="form-field">
-                    <input name="phoneNum" id="phoneNum" type="phone">
+                    <input name="phoneNum" id="phoneNum" type="">
                     <label for="phoneNum">PHONE NUMBER</label>
                 </div>
             </fieldset>
             <fieldset>
                 <div class="form-field">
-                    <input name="password" id="password" type="password">
+                    
+                    <input minlength="4" maxlength="20" name="password" id="password" type="password">
                     <label for="password">PASSWORD</label>
+                    <p class="error-msg">Password must be between 4 and 20 characters long</p>
                 </div>
                 <div class="form-field">
+                    
                     <input name="confirmPass" id="confirmPass" type="password">
                     <label for="confirmPass">CONFIRM PASSWORD</label>
+                    <p class="error-msg">Password does not match</p>
                 </div>
             </fieldset>
         </form>

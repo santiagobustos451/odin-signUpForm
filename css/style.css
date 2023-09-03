@@ -17,6 +17,10 @@
     font-size: large;
 }
 
+*:focus{
+    outline: 2px solid var(--color-accent);
+}
+
 p {
     line-height: 1.5;
 }
@@ -105,6 +109,7 @@ form {
 fieldset {
     width: 100%;
     display: flex;
+    align-items: flex-start;
     gap: 1rem;
 }
 
@@ -112,14 +117,16 @@ fieldset {
     width: 20rem;
     display: flex;
     flex-direction: column-reverse;
-    gap: .2rem;
+    position: relative;
 }
 
 label {
     font-size: small;
+    margin-bottom: .2rem;
 }
 
 input {
+    margin-bottom: .2rem;
     background-color: var(--color-dark-transparent);
     border: 1px solid var(--color-light);
     border-radius: 2px;
@@ -129,6 +136,24 @@ input {
     color: var(--color-light);
 }
 
+input:invalid:not(:focus) {
+    outline: 1px solid var(--color-error);
+    border-color: var(--color-error);
+}
+
+input:invalid:not(:focus) + label{
+    color: var(--color-error);
+}
+
+input:valid:not(:focus, :empty) {
+    outline: 1px solid var(--color-success);
+    border-color: var(--color-success);
+}
+
+input:valid:not(:focus, :empty) + label{
+    color: var(--color-success);
+}
+
 input:focus {
     outline: 1px solid var(--color-accent);
     border-color: var(--color-accent);
@@ -136,6 +161,21 @@ input:focus {
 
 input:focus + label{
     color: var(--color-accent);
+}
+
+.error-msg{
+    opacity: 0;
+    height: 0;
+    font-size: small;
+    order: -1;
+    pointer-events: none;
+    bottom: 0;
+    transition: all ease-in-out 100ms;
+}
+
+input:invalid:not(:focus) ~ .error-msg{
+    opacity: 1;
+    height: 1em;
 }
 
 .submit-box{
